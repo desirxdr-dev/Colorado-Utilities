@@ -13,7 +13,7 @@ function updateStatus() {
 const guild = client.guilds.cache.first();
 if (!guild) return;
 
-client.user.setActivity(`over ${guild.memberCount} members`, {
+client.user.setActivity(`${guild.memberCount} members`, {
 type: ActivityType.Watching
 });
 
