@@ -1,62 +1,65 @@
 module.exports = {
-name: "guildMemberAdd",
+  name: "guildMemberAdd",
 
-async execute(client, member) {
+  async execute(client, member) {
 
-const WELCOME_CHANNEL_ID = "1470296592031682703";
-const AUTO_ROLE_IDS = [
-    "1470287484478033950",
-    "1470287514026905726",
-    "1470287516396556441"
+    const WELCOME_CHANNEL_ID = "1470296592031682703";
 
-];
+    const AUTO_ROLE_IDS = [
+      "1470287484478033950",
+      "1470287514026905726",
+      "1470287516396556441"
+    ];
 
-try {
+    try {
 
-const channel = member.guild.channels.cache.get(WELCOME_CHANNEL_ID);
-const role = member.guild.roles.cache.get(AUTO_ROLE_IDS);
+      const channel = member.guild.channels.cache.get(WELCOME_CHANNEL_ID);
 
-if (role) {
-await member.roles.add(role);
-}
+      /* Give auto roles */
 
-if (channel) {
-channel.send({
-  "content": `Welcome ${member} to **Colorado State Roleplay**, an ER:LC roleplay server which provides the most immersive & realistic roleplay experience.`,
-  "components": [
-    {
-      "type": 1,
-      "components": [
-        {
-          "style": 2,
-          "type": 2,
-          "label": `${member.guild.memberCount}`,
-          "emoji": {
-            "id": "1483209858810646710",
-            "name": "person",
-            "animated": false
-          },
-          "disabled": true,
-          "flow": {
-            "actions": []
-          },
-          "custom_id": "p_280806775135932419"
-        },
-        {
-          "type": 2,
-          "style": 5,
-          "label": "Information",
-          "url": "https://discord.com/channels/1470287385081286801/1470294254055198857",
+      for (const roleId of AUTO_ROLE_IDS) {
+        const role = member.guild.roles.cache.get(roleId);
+        if (role) {
+          await member.roles.add(role);
         }
-      ]
+      }
+
+      /* Welcome message */
+
+      if (channel) {
+        channel.send({
+          content: `Welcome ${member} to **Colorado State Roleplay**, an ER:LC roleplay server which provides the most immersive & realistic roleplay experience.`,
+          components: [
+            {
+              type: 1,
+              components: [
+                {
+                  style: 2,
+                  type: 2,
+                  label: `${member.guild.memberCount}`,
+                  emoji: {
+                    id: "1483209858810646710",
+                    name: "person",
+                    animated: false
+                  },
+                  disabled: true,
+                  custom_id: "membercount_display"
+                },
+                {
+                  type: 2,
+                  style: 5,
+                  label: "Information",
+                  url: "https://discord.com/channels/1470287385081286801/1470294254055198857"
+                }
+              ]
+            }
+          ]
+        });
+      }
+
+    } catch (err) {
+      console.error("Join event error:", err);
     }
-  ]
-});
-}
 
-} catch (err) {
-console.error("Join event error:", err);
-}
-
-}
+  }
 };
