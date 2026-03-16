@@ -4,7 +4,7 @@ name: "group",
 
 async execute(message, args, client) {
 
-message.channel.send({
+await message.reply({
   "flags": 32768,
   "components": [
     {
