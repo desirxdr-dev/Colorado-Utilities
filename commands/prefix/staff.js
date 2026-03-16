@@ -22,7 +22,6 @@ message.channel.send({
               "style": 5,
               "label": "Link",
               "url": "https://docs.google.com/forms/d/e/1FAIpQLSeP6UHi4jFVar35-kkfBF0xOEXhjnVmmraPvZMyEHkeMuKFkg/viewform?usp=dialog",
-              "custom_id": "p_280808467093000196"
             }
           ]
         }

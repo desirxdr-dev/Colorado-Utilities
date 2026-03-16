@@ -22,7 +22,6 @@ message.channel.send({
               "style": 5,
               "label": "Link",
               "url": "https://www.roblox.com/communities/917844454/Colorado-State-Roleplay-I-Group#!/about",
-              "custom_id": "p_280808289447448578"
             }
           ]
         }
