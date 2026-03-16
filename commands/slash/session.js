@@ -212,7 +212,6 @@ module.exports = {
             "style": 5,
             "label": "Join",
             "url": "https://policeroleplay.community/join/colsrps",
-            "custom_id": "p_280816057432674305"
           }
         },
         {
@@ -282,7 +281,6 @@ module.exports = {
             "style": 5,
             "label": "Join",
             "url": "https://policeroleplay.community/join/colsrps",
-            "custom_id": "p_280816057432674305"
           }
         },
         {
