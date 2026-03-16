@@ -18,7 +18,7 @@ message.channel.send({
       "components": [
         {
           "type": 10,
-          "content": `<:members:1483213210667585606> **Membercount**: ${memberCount}\n<:rocket:1483213328657682515> **Boosts**: ${boosts} (Tier ${boostlevel})`
+          "content": `<:members:1483213210667585606> **Membercount**: ${memberCount}\n<:rocket:1483213328657682515> **Boosts**: ${boosts} (Tier ${boostLevel})`
         }
       ]
     }
