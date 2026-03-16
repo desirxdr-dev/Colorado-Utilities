@@ -7,19 +7,19 @@ module.exports = {
     .setDescription("Session announcements")
 
     .addSubcommand(sub =>
-      sub.setName("startup").setDescription("Session startup")
+      sub.setName("startup").setDescription("Start the in-game server up.")
     )
 
     .addSubcommand(sub =>
-      sub.setName("shutdown").setDescription("Session shutdown")
+      sub.setName("shutdown").setDescription("Shut the in-game server down.")
     )
 
     .addSubcommand(sub =>
-      sub.setName("boost").setDescription("Session boost")
+      sub.setName("boost").setDescription("Boost the in-game server's playercount.")
     )
 
     .addSubcommand(sub =>
-      sub.setName("full").setDescription("Server full")
+      sub.setName("full").setDescription("Send the session full message.")
     ),
 
   async execute(interaction) {
