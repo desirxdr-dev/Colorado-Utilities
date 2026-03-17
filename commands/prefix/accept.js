@@ -31,6 +31,9 @@ module.exports = {
       return message.reply("<:xMark:1470645299730190376> Failed to **fetch** user.");
     }
 
+    try {
+  await message.delete();
+} catch {}
 
       message.channel.send({
   "flags": 32768,

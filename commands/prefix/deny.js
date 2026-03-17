@@ -32,6 +32,10 @@ module.exports = {
     }
 
 
+    try {
+  await message.delete();
+} catch {}
+
       message.channel.send({
   "flags": 32768,
   "components": [
