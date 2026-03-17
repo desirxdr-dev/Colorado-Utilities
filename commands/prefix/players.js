@@ -9,16 +9,14 @@ module.exports = {
 
     try {
 
-      const res = await axios.get(
-        "https://api.policeroleplay.community/v1/server/players",
-        {
-          headers: {
-            Authorization: API_KEY
-          }
-        }
-      );
+const res = await fetch("https://api.policeroleplay.community/v1/server/players", {
+  headers: {
+    "Authorization": process.env.ERLC_API_KEY,
+    "Server-Key": process.env.ERLC_SERVER_KEY
+  }
+});
 
-      const players = res.data;
+const players = await res.json();
 
       // build player list
       let playerList = "";
