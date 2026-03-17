@@ -31,7 +31,7 @@ module.exports = {
         "https://api.policeroleplay.community/v1/server/players",
         {
           headers: {
-            Authorization: process.env.ERLC_API_KEY
+            "Server-Key": process.env.ERLC_API_KEY
           }
         }
       );
