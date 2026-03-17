@@ -51,26 +51,37 @@ module.exports = {
       const players = data;
 
       // 🔥 Build player list
-      let playerList;
+const playerList = players
+  .map(p => {
 
-      if (!players.length) {
-        playerList = "- No players in-game.";
-      } else {
-        playerList = players
-          .map(p => {
-            const username = p.Player.includes(":")
-              ? p.Player.split(":")[0]
-              : p.Player;
+    let username = p.Player;
+    let userId = null;
 
-            const team = p.Team && p.Team.trim() !== ""
-              ? p.Team
-              : "Civilian";
+    // case 1: "username:userid"
+    if (p.Player.includes(":")) {
+      const parts = p.Player.split(":");
+      username = parts[0];
+      userId = parts[1];
+    }
 
-            return `- ${username} (\`${p.UserId}\`) - ${team}`;
-          })
-          .join("\n");
-      }
+    // case 2: separate field exists
+    else if (p.UserId) {
+      userId = p.UserId;
+    }
 
+    const team = p.Team && p.Team.trim() !== ""
+      ? p.Team
+      : "Civilian";
+
+    // ✅ CLEAN OUTPUT (no undefined)
+    if (userId) {
+      return `- ${username} (\`${userId}\`) - ${team}`;
+    } else {
+      return `- ${username} - ${team}`;
+    }
+
+  })
+  .join("\n");
       // 🔥 Final content block
       const content = `${playerList}\n\n**Total Players**\n${players.length}/40`;
 
