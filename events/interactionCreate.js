@@ -1,41 +1,49 @@
 module.exports = {
-name: "interactionCreate",
+  name: "interactionCreate",
 
-async execute(client, interaction) {
+  async execute(client, interaction) {
 
-if (interaction.isChatInputCommand()) {
+    // 🔹 SLASH COMMANDS
+    if (interaction.isChatInputCommand()) {
 
-const command = client.slashCommands.get(interaction.commandName);
-if (!command) return;
+      const command = client.slashCommands.get(interaction.commandName);
+      if (!command) return;
 
-try {
+      try {
+        await command.execute(interaction, client);
+      } catch (error) {
+        console.error(error);
+      }
 
-await command.execute(interaction, client);
+    }
 
-} catch (error) {
+    // 🔹 BUTTONS
+    if (interaction.isButton()) {
 
-console.error(error);
+      const button = client.buttons.get(interaction.customId);
+      if (!button) return;
 
-}
+      try {
+        await button.execute(interaction, client);
+      } catch (error) {
+        console.error(error);
+      }
 
-}
+    }
 
-if (interaction.isButton()) {
+    // 🔥 ADD THIS (MODALS)
+    if (interaction.isModalSubmit()) {
 
-const button = client.buttons.get(interaction.customId);
-if (!button) return;
+      const modal = client.modals.get(interaction.customId);
+      if (!modal) return;
 
-try {
+      try {
+        await modal.execute(interaction, client);
+      } catch (error) {
+        console.error(error);
+      }
 
-await button.execute(interaction, client);
+    }
 
-} catch (error) {
-
-console.error(error);
-
-}
-
-}
-
-}
+  }
 };

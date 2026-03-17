@@ -12,7 +12,7 @@ module.exports = {
     if (message.author.bot) return;
 
     // 🔹 REQUIRED ROLE
-    const REQUIRED_ROLE_ID = "1470287418971258920"
+    const REQUIRED_ROLE_ID = "1470287418971258920";
 
     const isAdmin = message.member.permissions.has("Administrator");
     const hasRole = REQUIRED_ROLE_ID.some(id =>
