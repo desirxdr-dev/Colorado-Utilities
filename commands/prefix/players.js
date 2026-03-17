@@ -72,6 +72,8 @@ let playerList = players.length
     } catch (err) {
       console.error(err);
 
+console.log("ERLC RESPONSE:", data);
+
       message.channel.send("<:xMark:1470645299730190376> Could not **cache** in-game **players**.");
     }
 
