@@ -52,6 +52,8 @@ module.exports = {
     // ===== SEND LOG MESSAGE =====
     const channel = message.guild.channels.cache.get(LOG_CHANNEL_ID);
 
+    member.send("<:arrow:1470645281002360954> **Congratulations**! You have been **accepted** onto our **Staff Team**.")
+
     if (channel) {
       channel.send({
         content: `${member} (\`${member.id}\`) has **passed** their staff application.`

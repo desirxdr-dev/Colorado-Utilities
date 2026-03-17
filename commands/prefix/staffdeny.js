@@ -36,6 +36,8 @@ module.exports = {
     // ===== SEND LOG MESSAGE =====
     const channel = message.guild.channels.cache.get(LOG_CHANNEL_ID);
 
+    member.send("<:arrow:1470645281002360954> **Unfortunately**, you have **failed** your staff application.")
+
     if (channel) {
       channel.send({
         content: `${member} (\`${member.id}\`) has **failed** their staff application.`
