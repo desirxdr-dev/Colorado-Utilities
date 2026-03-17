@@ -15,10 +15,7 @@ module.exports = {
     const REQUIRED_ROLE_ID = "1470287418971258920";
 
     const isAdmin = message.member.permissions.has("Administrator");
-    const hasRole = REQUIRED_ROLE_ID.some(id =>
-      message.member.roles.cache.has(id)
-    );
-
+const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
     if (!isAdmin && !hasRole) {
       return message.reply("<:xMark:1470645299730190376> You do **not** have **permission** to use this command.");
     }
