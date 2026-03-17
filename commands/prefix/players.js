@@ -11,25 +11,24 @@ module.exports = {
         "https://api.policeroleplay.community/v1/server/players",
         {
           headers: {
-            Authorization: process.env.ERLC_API_KEY,
-            "Server-Key": process.env.ERLC_SERVER_KEY
+            Authorization: process.env.ERLC_API_KEY
           }
         }
       );
 
       const data = res.data;
 
-      // 🛑 handle API errors
+      // 🛑 handle errors
       if (!Array.isArray(data)) {
         console.log("ERLC API Error:", data);
 
-        return message.channel.send("❌ ER:LC API error. Check your keys.");
+        return message.channel.send(
+          `❌ ER:LC API Error: \`${data.message || "Unknown"}\``
+        );
       }
 
-      const players = data;
-
-      let playerList = players.length
-        ? players.map(p => `- ${p.Player} (\`${p.UserId}\`) - ${p.Team}`).join("\n")
+      const playerList = data.length
+        ? data.map(p => `- ${p.Player} (\`${p.UserId}\`) - ${p.Team}`).join("\n")
         : "- No players in-game.";
 
       await message.channel.send({
@@ -60,7 +59,7 @@ module.exports = {
     } catch (err) {
       console.error("AXIOS ERROR:", err.response?.data || err.message);
 
-      message.channel.send("<:xMark:1470645299730190376> Could not **cache** in-game **players**.");
+      message.channel.send("<:xMark:1470645299730190376> Could not fetch players.");
     }
 
   }
