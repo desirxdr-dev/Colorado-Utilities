@@ -134,15 +134,7 @@ module.exports = {
             "style": 2,
             "type": 2,
             "label": "Ping",
-            "flow": {
-              "actions": [
-                {
-                  "type": 5,
-                  "roleId": "1470287486952673300"
-                }
-              ]
-            },
-            "custom_id": "p_280815328689131522"
+            "custom_id": "session_ping"
           }
         },
         {
