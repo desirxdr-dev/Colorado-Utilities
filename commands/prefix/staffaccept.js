@@ -56,8 +56,19 @@ module.exports = {
 
     if (channel) {
       channel.send({
-        content: `${member} (\`${member.id}\`) has **passed** their staff application.`
-      });
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": `${member} (\`${member.id}\`) has **passed** their staff application.`
+        }
+      ]
+    }
+  ]
+});
     }
 
     
