@@ -1,5 +1,5 @@
 module.exports = {
-  name: "staffaccept",
+  name: "staffdeny",
 
   async execute(message, args, client) {
 
