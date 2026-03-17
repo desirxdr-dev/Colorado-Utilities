@@ -17,5 +17,6 @@ client.buttons = new Collection();
 require("./handlers/commandLoader")(client);
 require("./handlers/buttonLoader")(client);
 require("./handlers/eventLoader")(client);
+require("./handlers/modalHandler")(client);
 
 client.login(process.env.TOKEN);
