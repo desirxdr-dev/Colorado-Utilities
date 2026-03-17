@@ -95,7 +95,7 @@ module.exports = {
       "components": [
         {
           "type": 10,
-          "content": `${target} (\`${target.id}\`) has been removed from the staff team.`
+          "content": `${target} (\`${target.id}\`) has been **removed** from the **Staff Team**.`
         }
       ]
     }
