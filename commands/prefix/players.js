@@ -16,20 +16,21 @@ const res = await fetch("https://api.policeroleplay.community/v1/server/players"
   }
 });
 
-const players = await res.json();
+const data = await res.json();
 
-      // build player list
-      let playerList = "";
+// 🛑 handle API errors FIRST
+if (!Array.isArray(data)) {
+  console.log("ERLC API Error:", data);
 
-      if (players.length === 0) {
-        playerList = "- There are **no** players in-game.";
-      } else {
-        playerList = players
-          .map(p => {
-            return `- ${p.Player} (\`${p.UserId}\`) - ${p.Team}`;
-          })
-          .join("\n");
-      }
+  return message.channel.send("❌ ER:LC API error. Check your keys.");
+}
+
+// ✅ now it's safe
+const players = data;
+
+let playerList = players.length
+  ? players.map(p => `- ${p.Player} (\`${p.UserId}\`) - ${p.Team}`).join("\n")
+  : "- No players in-game.";
 
       await message.reply({
         flags: 32768,
