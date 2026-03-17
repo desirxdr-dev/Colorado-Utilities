@@ -9,7 +9,7 @@ module.exports = {
 
     // 🔹 REQUIRED ROLE
     const REQUIRED_ROLE_IDS = [
-      "1474259187877019691"
+      "1470287425824755785"
     ];
 
     const isAdmin = message.member.permissions.has("Administrator");
@@ -43,7 +43,7 @@ module.exports = {
         console.log("ERLC API Error:", data);
 
         return message.reply({
-          content: `❌ ER:LC API Error: \`${data.message || "Unknown"}\``,
+          content: `<:xMark:1470645299730190376>ER:LC API Error: \`${data.message || "Unknown"}\``,
           allowedMentions: { repliedUser: false }
         });
       }
