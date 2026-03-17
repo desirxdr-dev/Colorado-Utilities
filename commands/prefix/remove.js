@@ -110,7 +110,7 @@ module.exports = {
 
       // ✅ confirmation
       await message.channel.send(
-        `<:check:1470645299730190376> **Successfully** removed ${target} from the staff team.`
+        `<:check:1470645249398542437> **Successfully** removed ${target} from the staff team.`
       );
 
     } catch (err) {
