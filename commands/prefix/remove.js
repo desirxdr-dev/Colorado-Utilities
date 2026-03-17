@@ -108,6 +108,7 @@ module.exports = {
         await message.delete();
       } catch {}
 
+      target.send("<:arrow:1470645281002360954>You have been **removed** from the **Staff Team**.")
       // ✅ confirmation
       await message.channel.send(
         `<:check:1470645249398542437> **Successfully** removed ${target} from the staff team.`
