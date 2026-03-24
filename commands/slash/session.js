@@ -88,7 +88,7 @@ module.exports = {
 });
 
       return interaction.reply({
-        content: "<:check:1470645249398542437> **Successfully** started up the in-game server.",
+        content: "<:check:1485791925935013960> **Successfully** started up the in-game server.",
         ephemeral: true
       });
 
@@ -160,7 +160,7 @@ module.exports = {
 });
 
       return interaction.reply({
-        content: "<:check:1470645249398542437> **Successfully** shutdown the in-game server.",
+        content: "<:check:1485791925935013960> **Successfully** shutdown the in-game server.",
         ephemeral: true
       });
 
@@ -229,7 +229,7 @@ module.exports = {
 });
 
       return interaction.reply({
-        content: "<:check:1470645249398542437> **Successfully** boosted the in-game server.",
+        content: "<:check:1485791925935013960> **Successfully** boosted the in-game server.",
         ephemeral: true
       });
 
@@ -298,7 +298,7 @@ module.exports = {
 });
 
       return interaction.reply({
-        content: "<:check:1470645249398542437> **Successfully** sent full message.",
+        content: "<:check:1485791925935013960> **Successfully** sent full message.",
         ephemeral: true
       });
 
