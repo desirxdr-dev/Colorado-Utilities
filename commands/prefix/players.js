@@ -127,7 +127,7 @@ const playerList = players
       console.error("AXIOS ERROR:", err.response?.data || err.message);
 
       message.reply({
-        content: "<:xMark:1470645299730190376> **Failed** to **cache** the currently in-game players.",
+        content: "<:xMark:1485791953307308223> **Failed** to **cache** the currently in-game players.",
         allowedMentions: { repliedUser: false }
       });
     }

@@ -13,14 +13,14 @@ module.exports = {
       !message.member.roles.cache.has(REQUIRED_ROLE_ID) &&
       !message.member.permissions.has("Administrator")
     ) {
-      return message.reply("<:xMark:1470645299730190376> You do **not** have **permission** to use this command.");
+      return message.reply("<:xMark:1485791953307308223> You do **not** have **permission** to use this command.");
     }
 
     // ===== GET USER =====
     let userId = args[0];
 
     if (!userId) {
-      return message.reply("<:xMark:1470645299730190376> Failed to fetch a **valid** user ID or **mention** from given arguments.");
+      return message.reply("<:xMark:1485791953307308223> Failed to fetch a **valid** user ID or **mention** from given arguments.");
     }
 
     // clean mention → ID
@@ -29,7 +29,7 @@ module.exports = {
     const member = await message.guild.members.fetch(userId).catch(() => null);
 
     if (!member) {
-      return message.reply("<:xMark:1470645299730190376> Failed to **fetch** user.");
+      return message.reply("<:xMark:1485791953307308223> Failed to **fetch** user.");
     }
 
     // ===== ADD ROLES =====

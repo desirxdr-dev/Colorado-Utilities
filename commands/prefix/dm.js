@@ -17,21 +17,21 @@ module.exports = {
     const isAdmin = message.member.permissions.has("Administrator");
 const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
     if (!isAdmin && !hasRole) {
-      return message.reply("<:xMark:1470645299730190376> You do **not** have **permission** to use this command.");
+      return message.reply("<:xMark:1485791953307308223> You do **not** have **permission** to use this command.");
     }
 
     const userId = args[0];
     const text = args.slice(1).join(" ");
 
     if (!userId || !text) {
-      return message.reply("<:xMark:1470645299730190376> **Failed** to fetch a valid **user ID** or **message**.");
+      return message.reply("<:xMark:1485791953307308223> **Failed** to fetch a valid **user ID** or **message**.");
     }
 
     let user;
     try {
       user = await message.client.users.fetch(userId);
     } catch {
-      return message.reply("<:xMark:1470645299730190376> Failed to **fetch** a **valid** user ID.");
+      return message.reply("<:xMark:1485791953307308223> Failed to **fetch** a **valid** user ID.");
     }
 
     // 🔥 BUTTON
@@ -91,7 +91,7 @@ const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
       message.reply(`<:check:1470645249398542437> **Successfully** sent message to <@${userId}>.`);
 
     } catch {
-      message.reply("<:xMark:1470645299730190376> **Failed** to **message** user.");
+      message.reply("<:xMark:1485791953307308223> **Failed** to **message** user.");
     }
   }
 };

@@ -48,7 +48,7 @@ module.exports = {
 
     if (!userId) {
       return message.reply({
-        content: "**<:xMark:1470645299730190376> Failed** to detect a valid **user ID**.",
+        content: "**<:xMark:1485791953307308223> Failed** to detect a valid **user ID**.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -57,7 +57,7 @@ module.exports = {
 
     if (!target) {
       return message.reply({
-        content: "<:xMark:1470645299730190376> **Failed** to cache user.",
+        content: "<:xMark:1485791953307308223> **Failed** to cache user.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -69,7 +69,7 @@ module.exports = {
 
     if (!rolesToRemove.length) {
       return message.reply({
-        content: "<:xMark:1470645299730190376> User is **not** a **staff** member.",
+        content: "<:xMark:1485791953307308223> User is **not** a **staff** member.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -108,7 +108,7 @@ module.exports = {
         await message.delete();
       } catch {}
 
-      target.send("<:arrow:1470645281002360954>You have been **removed** from the **Staff Team**.")
+      target.send("<:arrow:1470645281002360954> You have been **removed** from the **Staff Team**.")
       // ✅ confirmation
       await message.channel.send(
         `<:check:1470645249398542437> **Successfully** removed ${target} from the staff team.`
@@ -118,7 +118,7 @@ module.exports = {
       console.error(err);
 
       message.reply({
-        content: "<:xMark:1470645299730190376> An **error** occured while attempting to remove the user's roles.",
+        content: "<:xMark:1485791953307308223> An **error** occured while attempting to remove the user's roles.",
         allowedMentions: { repliedUser: false }
       });
     }

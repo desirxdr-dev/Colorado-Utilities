@@ -45,7 +45,7 @@ module.exports = {
         !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
       ) {
         return interaction.reply({
-          content: "<:xMark:1470645299730190376> You do **not** have **permission** to run this command.",
+          content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.",
           ephemeral: true
         });
       }
@@ -103,7 +103,7 @@ module.exports = {
         !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
       ) {
         return interaction.reply({
-          content: "You do **not** have **permission** to run this command.",
+          content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.",
           ephemeral: true
         });
       }
@@ -127,14 +127,17 @@ module.exports = {
           "components": [
             {
               "type": 10,
-              "content": "Our in-game server has now shutdown. We thank everyone who attended for joining. Another session will be hosted shortly. Receive our sessions ping role using the button."
+              "content": "> Our in-game server has now shutdown. We thank everyone who attended for joining. Another session will be hosted shortly. Receive our session ping role using the button."
             }
           ],
           "accessory": {
-            "style": 2,
+            "style": 4,
             "type": 2,
             "label": "Ping",
-            "custom_id": "session_ping"
+            "flow": {
+              "actions": []
+            },
+            "custom_id": "p_283388474730483715"
           }
         },
         {
@@ -146,7 +149,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1483193711671382067/1483193962209476688/Screenshot_2026-02-19_212527.png?ex=69b9b385&is=69b86205&hm=e6a896b7753828d73905ed1ea6dd4fbdd821d21888992bebf1243b2c0165e4e8&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1485354519163310110/1485528100266840154/image.png?ex=69c2da1a&is=69c1889a&hm=81da49b5557836e78e8f6f95bf34359331e8b69d725a74aed9cbcbed642824bd&=&format=webp&quality=lossless"
               }
             }
           ]
@@ -172,7 +175,7 @@ module.exports = {
         !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
       ) {
         return interaction.reply({
-          content: "You do **not** have **permission** to run this command.",
+          content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.",
           ephemeral: true
         });
       }
@@ -241,7 +244,7 @@ module.exports = {
         !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
       ) {
         return interaction.reply({
-          content: "You do **not** have **permission** to run this command.",
+          content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.",
           ephemeral: true
         });
       }

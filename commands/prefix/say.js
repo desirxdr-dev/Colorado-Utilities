@@ -13,7 +13,7 @@ module.exports = {
 
     if (!isAdmin && !hasRole) {
       return message.reply({
-        content: "<:xMark:1470645299730190376> You do **not** have **permission** to use this command.",
+        content: "<:xMark:1485791953307308223> You do **not** have **permission** to use this command.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -21,7 +21,7 @@ module.exports = {
     // ❌ no message
     if (!args.length) {
       return message.reply({
-        content: "<:xMark:1470645299730190376> Failed to **fetch** message provided.",
+        content: "<:xMark:1485791953307308223> Failed to **fetch** message provided.",
         allowedMentions: { repliedUser: false }
       });
     }

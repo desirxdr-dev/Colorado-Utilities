@@ -1,5 +1,5 @@
 module.exports = {
-  customId: "session_ping",
+  customId: "p_283388474730483715",
 
   async execute(interaction) {
 
@@ -8,7 +8,7 @@ module.exports = {
 
     if (!role) {
       return interaction.reply({
-        content: "<:xMark:1470645299730190376> **Failed** to cache **sessions** role.",
+        content: "<:xMark:1485791953307308223> **Failed** to cache **sessions** role.",
         ephemeral: true
       });
     }
@@ -41,7 +41,7 @@ module.exports = {
       console.error(err);
 
       interaction.reply({
-        content: "<:xMark:1470645299730190376> **Failed** to update roles.",
+        content: "<:xMark:1485791953307308223> **Failed** to update roles.",
         ephemeral: true
       });
     }

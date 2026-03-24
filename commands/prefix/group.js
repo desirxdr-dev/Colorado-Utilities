@@ -12,7 +12,7 @@ await message.reply({
       "components": [
         {
           "type": 10,
-          "content": "*Join our **ROBLOX** group [here](https://www.roblox.com/communities/917844454/Colorado-State-Roleplay-I-Group#!/about)*"
+          "content": "*Join our **ROBLOX** group [here](https://www.roblox.com/communities/917844454/Ontario-Roleplay-I-Roblox-Group#!/about)*"
         },
         {
           "type": 1,
@@ -21,7 +21,7 @@ await message.reply({
               "type": 2,
               "style": 5,
               "label": "Link",
-              "url": "https://www.roblox.com/communities/917844454/Colorado-State-Roleplay-I-Group#!/about",
+              "url": "https://www.roblox.com/communities/917844454/Ontario-Roleplay-I-Roblox-Group#!/about",
             }
           ]
         }

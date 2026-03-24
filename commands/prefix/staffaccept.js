@@ -36,7 +36,7 @@ module.exports = {
     const member = await message.guild.members.fetch(userId).catch(() => null);
 
     if (!member) {
-      return message.reply("<:xMark:1470645299730190376> Failed to **fetch** user.");
+      return message.reply("<:xMark:1485791953307308223> Failed to **fetch** user.");
     }
 
     // ===== ADD ROLES =====
@@ -46,7 +46,7 @@ module.exports = {
       }
     } catch (err) {
       console.error(err);
-      return message.reply("<:xMark:1470645299730190376> Failed to **add** staff roles.");
+      return message.reply("<:xMark:1485791953307308223> Failed to **add** staff roles.");
     }
 
     // ===== SEND LOG MESSAGE =====
