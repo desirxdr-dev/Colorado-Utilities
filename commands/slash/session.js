@@ -66,7 +66,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": "Our in-game server has started up. If you are looking to join the server, view the in-game information below.\n\n- **Server Name**\nColorado State Roleplay I Strict I Immersive\n- **Sever Owner**\ndesirxdr\n- **Server Code**\ncolsrps\n- **Requirements**\nTier 1\n\nIf you need assistance in-game, say `!mod` in **ROBLOX** chat and an in-game moderator will assist you."
+          "content": "Our in-game server has started up. If you are looking to join the server, view the in-game information below.\n\n- **Server Name**\nOntario Roleplay I Strict I Realistic\n- **Sever Owner**\ndesirxdr\n- **Server Code**\nontariorps\n- **Requirements**\nTier 1\n\nIf you need assistance in-game, say `!mod` in **ROBLOX** chat and an in-game moderator will assist you."
         },
         {
           "type": 14,
@@ -206,7 +206,7 @@ module.exports = {
             "type": 2,
             "style": 5,
             "label": "Join",
-            "url": "https://policeroleplay.community/join/colsrps",
+            "url": "https://policeroleplay.community/join/ontariorps",
           }
         },
         {
@@ -275,7 +275,7 @@ module.exports = {
             "type": 2,
             "style": 5,
             "label": "Join",
-            "url": "https://policeroleplay.community/join/colsrps",
+            "url": "https://policeroleplay.community/join/ontariorps",
           }
         },
         {
