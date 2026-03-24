@@ -78,7 +78,7 @@ const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
                 items: [
                   {
                     media: {
-                      url: "https://media.discordapp.net/attachments/1483193711671382067/1483193962209476688/Screenshot_2026-02-19_212527.png"
+                      url: "https://media.discordapp.net/attachments/1485354519163310110/1485528100266840154/image.png?ex=69c2da1a&is=69c1889a&hm=81da49b5557836e78e8f6f95bf34359331e8b69d725a74aed9cbcbed642824bd&=&format=webp&quality=lossless"
                     }
                   }
                 ]
