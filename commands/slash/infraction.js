@@ -38,6 +38,8 @@ module.exports = {
     ),
 
   async execute(interaction) {
+
+
     // permission check: adjust role ID or use Administrator
     const REQUIRED_ROLE_ID = '1471741614463520868';
     if (
@@ -47,25 +49,63 @@ module.exports = {
       return interaction.reply({ content: '<:xMark:1485791953307308223> You do **not** have **permission** to run this command.', ephemeral: true });
     }
 
-    const sub = interaction.options.getSubcommand();
+    if (sub === "issue") {
+  const user = interaction.options.getUser("user", true);
+  const type = interaction.options.getString("type", true);
+  const reason = interaction.options.getString("reason") || "No reason provided";
 
-    if (sub === 'issue') {
-      const user = interaction.options.getUser('user');
-      const type = interaction.options.getString('type');
-      const reason = interaction.options.getString('reason');
+  // create infraction in DB (returns row with id)
+  const inf = db.createInfraction({
+    userId: user.id,
+    moderatorId: interaction.user.id,
+    type,
+    reason,
+  });
 
-      const inf = db.createInfraction({
-        userId: user.id,
-        moderatorId: interaction.user.id,
-        type,
-        reason,
-      });
+  const id = inf.id;
+  const TARGET_CHANNEL_ID = "1470297349006950515"; // change to your channel
+  const channel = interaction.guild.channels.cache.get(TARGET_CHANNEL_ID);
+  if (!channel) return interaction.reply({ content: "<:xMark:1485791953307308223> Target channel not found.", ephemeral: true });
 
-      return interaction.reply({
-        content: `<:check:1485791925935013960> **Succesfully** issued infraction **#${inf.id}** to ${user}.`,
-        ephemeral: false,
-      });
-    }
+  // build components object with values inserted
+  const componentsPayload = {
+    flags: 32768,
+    components: [
+      {
+        type: 17,
+        components: [
+          { type: 10, content: `# Infraction Issued - ${id}` },
+          { type: 14, spacing: 2 },
+          {
+            type: 10,
+            content:
+              `An infraction has been issued by ${interaction.user.tag}.\n\n` +
+              `**User**: ${user.tag}\n` +
+              `**Type**: ${type}\n` +
+              `**Reason**: ${reason}\n` +
+              `**Infraction ID**: ${id}`
+          },
+          { type: 14, spacing: 2 },
+          {
+            type: 12,
+            items: [
+              {
+                media: {
+                  url: "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+
+  await channel.send(componentsPayload);
+
+  return interaction.reply({ content: `<:check:1485791925935013960> Issued infraction #${id}.`, ephemeral: true });
+}
+
 
     if (sub === "view") {
   const user = interaction.options.getUser("user", true);
