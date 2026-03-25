@@ -49,14 +49,12 @@ module.exports = {
       return interaction.reply({ content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.", ephemeral: true });
     }
 
-    // get subcommand properly
-    let sub;
-    try {
-      sub = interaction.options.getSubcommand();
-    } catch {
-      return interaction.reply({ content: "<:xMark:1485791953307308223> Invalid subcommand.", ephemeral: true });
-    }
-
+let sub;
+try {
+  sub = interaction.options.getSubcommand();
+} catch {
+  return interaction.reply({ content: "<:xMark:1485791953307308223> Invalid subcommand.", flags: 64 });
+}
     if (sub === "issue") {
       const user = interaction.options.getUser("user", true);
       const type = interaction.options.getString("type", true);
