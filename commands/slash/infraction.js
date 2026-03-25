@@ -81,7 +81,7 @@ async execute(interaction) {
       {
         type: 17,
         components: [
-          { type: 10, content: `# Infraction Issued - ${id}` },
+          { type: 10, content: `# Infraction Issued - #${id}` },
           { type: 14, spacing: 2 },
           {
             type: 10,
@@ -118,7 +118,7 @@ async execute(interaction) {
       "components": [
         {
           "type": 10,
-          "content": `# Infraction Issued - ${id}`
+          "content": `# Infraction Issued - #${id}`
         },
         {
           "type": 14,
