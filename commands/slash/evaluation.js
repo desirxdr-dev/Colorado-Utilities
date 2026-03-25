@@ -60,7 +60,7 @@ module.exports = {
             { type: 14, spacing: 2 },
             {
               type: 10,
-              content: `A staff evaluation has been issued.\n\n**User**: ${user.tag}\n**Rating**: ${rating}\n**Feedback**: ${feedback}`
+              content: `A staff evaluation has been issued.\n\n**User**: ${user}\n**Rating**: ${rating}\n**Feedback**: ${feedback}`
             },
             {
               type: 1,
