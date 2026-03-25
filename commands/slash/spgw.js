@@ -23,20 +23,20 @@ module.exports = {
 
     const prizeInput = new TextInputBuilder()
       .setCustomId('prize')
-      .setLabel('1,000 Robux...')
+      .setLabel('Prize')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
     const winnersInput = new TextInputBuilder()
       .setCustomId('winners')
-      .setLabel('Amount of winner(s)')
+      .setLabel('Winner(s)')
       .setPlaceholder('1')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
     const durationInput = new TextInputBuilder()
       .setCustomId('duration')
-      .setLabel('Duration (7d, 48h, 1m)')
+      .setLabel('Duration')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
