@@ -13,6 +13,8 @@ module.exports = {
 
     // 🔹 REQUIRED ROLE
     const REQUIRED_ROLE_ID = "1470287418971258920";
+    const LOG_CHANNEL_ID = "1483355559943077918"; // where message gets sent
+
 
     const isAdmin = message.member.permissions.has("Administrator");
 const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
@@ -87,6 +89,48 @@ const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
           }
         ]
       });
+
+      
+    const channel = message.guild.channels.cache.get(LOG_CHANNEL_ID);
+
+    if (channel) {
+      channel.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": "# Message Log"
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `A message has been sent by ${interaction.user} using the bot.\n\n**User**: ${user}\n**Message**: ${messsage}`
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c568b7&is=69c41737&hm=2e8db25aab9a4698240d0ba9e59dda14a18a30f76bd3eef854e25b10087729a4&=&format=webp&quality=lossless&width=2342&height=120"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
+    }
 
       message.reply(`<:check:1470645249398542437> **Successfully** sent message to <@${userId}>.`);
 
