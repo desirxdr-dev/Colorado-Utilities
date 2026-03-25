@@ -37,7 +37,7 @@ module.exports = {
       !interaction.member.roles.cache.has(REQUIRED_ROLE_ID) &&
       !interaction.member.permissions.has(PermissionFlagsBits.Administrator)
     ) {
-      return interaction.reply({ content: "<:xMark:1485791953307308223> You do **not** have permission to run this command.", ephemeral: true });
+      return interaction.reply({ content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.", ephemeral: true });
     }
 
     const channel = interaction.guild.channels.cache.get(EVALUATION_CHANNEL_ID);
