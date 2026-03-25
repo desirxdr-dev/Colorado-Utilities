@@ -86,8 +86,8 @@ async execute(interaction) {
           {
             type: 10,
             content:
-              `An infraction has been issued by ${interaction.user.tag}.\n\n` +
-              `**User**: ${user.tag}\n` +
+              `An infraction has been issued by ${interaction.user}.\n\n` +
+              `**User**: ${user}\n` +
               `**Type**: ${type}\n` +
               `**Reason**: ${reason}\n` +
               `**Infraction ID**: ${id}`
@@ -109,6 +109,43 @@ async execute(interaction) {
   };
 
   await channel.send(componentsPayload);
+
+  await user.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": `# Infraction Issued - ${id}`
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `An infraction has been issued to you.\n\n**Type**: ${type}\n**Reason**: ${reason}\n** Infraction ID**: ${id}`
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c4bff7&is=69c36e77&hm=8e54030a503682a86830992684c71241dedd238357cb34f9f19678d0708103d1&=&format=webp&quality=lossless"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
 
   return interaction.reply({ content: `<:check:1485791925935013960> Issued infraction #${id}.`, ephemeral: true });
 }
