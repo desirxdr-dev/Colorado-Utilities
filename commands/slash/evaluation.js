@@ -37,6 +37,10 @@ module.exports = {
 
     const channel = interaction.guild.channels.cache.get(EVALUATION_CHANNEL_ID);
     if (!channel) return;
+
+    const user = interaction.options.getUser("user");
+    const rating = interaction.options.getNumber("rating");
+    const feedback = interaction.options.getString("feedback");
   }
 
     };

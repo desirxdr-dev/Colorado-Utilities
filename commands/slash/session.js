@@ -66,7 +66,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": "Our in-game server has started up. If you are looking to join the server, view the in-game information below.\n\n- **Server Name**\nOntario Roleplay I Strict I Realistic\n- **Sever Owner**\ndesirxdr\n- **Server Code**\nontariorps\n- **Requirements**\nTier 1\n\nIf you need assistance in-game, say `!mod` in **ROBLOX** chat and an in-game moderator will assist you."
+          "content": "Our in-game server has started up. If you are looking to join the server, view the in-game information below.\n\n- **Server Name**\Colorado State Roleplay I Strict I Realistic\n- **Sever Owner**\ndesirxdr\n- **Server Code**\ncolosrps\n- **Requirements**\nTier 1\n\nIf you need assistance in-game, say `!mod` in **ROBLOX** chat and an in-game moderator will assist you."
         },
         {
           "type": 14,
@@ -77,7 +77,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1483193711671382067/1483193962209476688/Screenshot_2026-02-19_212527.png?ex=69b9b385&is=69b86205&hm=e6a896b7753828d73905ed1ea6dd4fbdd821d21888992bebf1243b2c0165e4e8&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1485354567641202859/1486234459153109063/Screenshot_2026-03-24_222348.png?ex=69c4c333&is=69c371b3&hm=654a61720b1b5b9fd58fd83cd6c8cc4ba405e39c50ea3ff3ecbbeb633edd8929&=&format=webp&quality=lossless"
               }
             }
           ]
@@ -149,7 +149,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1485354519163310110/1485528100266840154/image.png?ex=69c2da1a&is=69c1889a&hm=81da49b5557836e78e8f6f95bf34359331e8b69d725a74aed9cbcbed642824bd&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1485354567641202859/1486234459153109063/Screenshot_2026-03-24_222348.png?ex=69c4c333&is=69c371b3&hm=654a61720b1b5b9fd58fd83cd6c8cc4ba405e39c50ea3ff3ecbbeb633edd8929&=&format=webp&quality=lossless"
               }
             }
           ]
@@ -206,7 +206,7 @@ module.exports = {
             "type": 2,
             "style": 5,
             "label": "Join",
-            "url": "https://policeroleplay.community/join/ontariorps",
+            "url": "https://policeroleplay.community/join/colosrps",
           }
         },
         {
@@ -218,7 +218,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1485354519163310110/1485528100266840154/image.png?ex=69c2da1a&is=69c1889a&hm=81da49b5557836e78e8f6f95bf34359331e8b69d725a74aed9cbcbed642824bd&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1485354567641202859/1486234459153109063/Screenshot_2026-03-24_222348.png?ex=69c4c333&is=69c371b3&hm=654a61720b1b5b9fd58fd83cd6c8cc4ba405e39c50ea3ff3ecbbeb633edd8929&=&format=webp&quality=lossless"
               }
             }
           ]
@@ -275,7 +275,7 @@ module.exports = {
             "type": 2,
             "style": 5,
             "label": "Join",
-            "url": "https://policeroleplay.community/join/ontariorps",
+            "url": "https://policeroleplay.community/join/colosrps",
           }
         },
         {
@@ -287,7 +287,7 @@ module.exports = {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1485354519163310110/1485528100266840154/image.png?ex=69c2da1a&is=69c1889a&hm=81da49b5557836e78e8f6f95bf34359331e8b69d725a74aed9cbcbed642824bd&=&format=webp&quality=lossless"
+                "url": "https://media.discordapp.net/attachments/1485354567641202859/1486234459153109063/Screenshot_2026-03-24_222348.png?ex=69c4c333&is=69c371b3&hm=654a61720b1b5b9fd58fd83cd6c8cc4ba405e39c50ea3ff3ecbbeb633edd8929&=&format=webp&quality=lossless"
               }
             }
           ]
