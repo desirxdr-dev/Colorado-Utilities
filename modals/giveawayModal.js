@@ -60,7 +60,8 @@ module.exports = {
                 style: 2,
                 type: 2,
                 label: 'Entries: 0',
-                custom_id: 'entries_giveaway'
+                custom_id: 'entries_giveaway',
+                disabled: true
               }
             },
             { type: 14, spacing: 1 },
