@@ -41,6 +41,111 @@ module.exports = {
     const user = interaction.options.getUser("user");
     const rating = interaction.options.getNumber("rating");
     const feedback = interaction.options.getString("feedback");
+
+    channel.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": "# Staff Evaluation"
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `A staff evaluation has been issued.\n\n**User**: ${user}\n**Rating**: ${rating}\n**Feedback**: ${feedback}`
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "style": 1,
+              "type": 2,
+              "label": `${rating}/5`,
+              "disabled": true,
+              "flow": {
+                "actions": []
+              },
+              "custom_id": "p_283972826510135297"
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c4bff7&is=69c36e77&hm=8e54030a503682a86830992684c71241dedd238357cb34f9f19678d0708103d1&=&format=webp&quality=lossless"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
+
+  await user.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": "# Staff Evaluation"
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `A staff evaluation has been issued to you by our **High Rank Team**.\n\n**Rating**: ${rating}\n**Feedback**: ${feedback}`
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "style": 1,
+              "type": 2,
+              "label": `${rating}/5`,
+              "disabled": true,
+              "flow": {
+                "actions": []
+              },
+              "custom_id": "p_283972826510135297"
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1485354519163310110/1486230985522544740/Screenshot_2026-02-19_212527.png?ex=69c4bff7&is=69c36e77&hm=8e54030a503682a86830992684c71241dedd238357cb34f9f19678d0708103d1&=&format=webp&quality=lossless"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
   }
+  
 
     };
