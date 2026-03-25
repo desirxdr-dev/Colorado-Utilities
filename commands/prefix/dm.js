@@ -101,7 +101,7 @@ try {
             { type: 14, spacing: 2 },
             {
               type: 10,
-              content: `A message has been sent by ${message.author.tag} using the bot.\n\n**User**: ${user.tag}\n**Message**: ${text}`
+              content: `A message has been sent by ${message.author} using the bot.\n\n**User**: ${user}\n**Message**: ${text}`
             },
             { type: 14, spacing: 2 },
             {
