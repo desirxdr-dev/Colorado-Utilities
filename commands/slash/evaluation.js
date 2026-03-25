@@ -32,7 +32,7 @@ module.exports = {
 
   async execute(interaction) {
 
-    const HR_ROLE_ID = "1471741614463520868";
+    const HR_ROLE_ID = "<@&1471741614463520868>";
     const EVALUATION_CHANNEL_ID = "1470297377935196344";
 
     const channel = interaction.guild.channels.cache.get(EVALUATION_CHANNEL_ID);
@@ -145,6 +145,8 @@ module.exports = {
     }
   ]
 })
+
+  await interaction.reply("<:check:1485791925935013960> **Successfully** issued evaluation.")
   }
   
 
