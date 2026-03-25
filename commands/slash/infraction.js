@@ -45,7 +45,7 @@ async execute(interaction) {
     !interaction.member.permissions.has(PermissionFlagsBits.Administrator) &&
     !interaction.member.roles.cache.has(REQUIRED_ROLE_ID)
   ) {
-    return interaction.reply({ content: "<:xMark:1485791953307308223> You do not have permission.", ephemeral: true });
+    return interaction.reply({ content: "<:xMark:1485791953307308223> You do **not** have **permission** to run this command.", ephemeral: true });
   }
 
   // get subcommand properly
