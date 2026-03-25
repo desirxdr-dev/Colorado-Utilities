@@ -38,8 +38,8 @@ module.exports = {
                   type: 2,
                   label: `${member.guild.memberCount}`,
                   emoji: {
-                    id: "1483209858810646710",
-                    name: "person",
+                    id: "1485398120878575637",
+                    name: "Person",
                     animated: false
                   },
                   disabled: true,
