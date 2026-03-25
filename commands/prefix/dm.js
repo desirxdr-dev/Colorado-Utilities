@@ -132,7 +132,7 @@ const hasRole = message.member.roles.cache.has(REQUIRED_ROLE_ID);
 })
     }
 
-      message.reply(`<:check:1470645249398542437> **Successfully** sent message to <@${userId}>.`);
+      message.reply(`<:check:1470645249398542437> **Sucdcessfully** sent message to <@${userId}>.`);
 
     } catch {
       message.reply("<:xMark:1485791953307308223> **Failed** to **message** user.");
