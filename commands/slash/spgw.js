@@ -24,6 +24,7 @@ module.exports = {
     const prizeInput = new TextInputBuilder()
       .setCustomId('prize')
       .setLabel('Prize')
+      .setPlaceholder('1000 Robux...')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
@@ -37,12 +38,14 @@ module.exports = {
     const durationInput = new TextInputBuilder()
       .setCustomId('duration')
       .setLabel('Duration')
+      .setPlaceholder('7d, 24h, 1m')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
     const linkInput = new TextInputBuilder()
       .setCustomId('link')
       .setLabel('Server Link')
+      .setPlaceholder('https://discord.gg/')
       .setStyle(TextInputStyle.Short)
       .setRequired(true);
 
