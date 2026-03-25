@@ -37,22 +37,29 @@ module.exports = {
         .addUserOption(o => o.setName('user').setDescription('Select the user to view infractions for.').setRequired(true))
     ),
 
-  async execute(interaction) {
+async execute(interaction) {
+  const REQUIRED_ROLE_ID = "1471741614463520868";
 
+  // permission check
+  if (
+    !interaction.member.permissions.has(PermissionFlagsBits.Administrator) &&
+    !interaction.member.roles.cache.has(REQUIRED_ROLE_ID)
+  ) {
+    return interaction.reply({ content: "<:xMark:1485791953307308223> You do not have permission.", ephemeral: true });
+  }
 
-    // permission check: adjust role ID or use Administrator
-    const REQUIRED_ROLE_ID = '1471741614463520868';
-    if (
-      !interaction.member.permissions.has(PermissionFlagsBits.Administrator) &&
-      !interaction.member.roles.cache.has(REQUIRED_ROLE_ID)
-    ) {
-      return interaction.reply({ content: '<:xMark:1485791953307308223> You do **not** have **permission** to run this command.', ephemeral: true });
-    }
+  // get subcommand properly
+  let sub;
+  try {
+    sub = interaction.options.getSubcommand();
+  } catch {
+    return interaction.reply({ content: "<:xMark:1485791953307308223> Invalid subcommand.", ephemeral: true });
+  }
 
     if (sub === "issue") {
   const user = interaction.options.getUser("user", true);
   const type = interaction.options.getString("type", true);
-  const reason = interaction.options.getString("reason") || "No reason provided";
+  const reason = interaction.options.getString("reason");
 
   // create infraction in DB (returns row with id)
   const inf = db.createInfraction({
